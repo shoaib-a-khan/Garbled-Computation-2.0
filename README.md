@@ -25,7 +25,7 @@ The details of our Garbled Computation protocol may be found in the related rese
 ## Overview of Software Prototype
 The prototype implements four independent entities:
 
-### Preprpcessor:
+### Preprocessor:
 Simulates the actions of program-ownwer and data-owner. Preprocessor splits into random additive shares both program `P.txt` and data `D.txt`. It outputs pair `P_A.txt`, `D_A.txt` to `./inputs/alice/` and pair `P_B.txt`, `D_B.txt` to `./inputs/bob/`. In real world, the program P is split by the program owner (or Alice) and the data D is split by data owner (or Bob). All these computations happen in the offline phase.
 
 ### Helper: 
