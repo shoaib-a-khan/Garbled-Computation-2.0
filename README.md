@@ -10,5 +10,9 @@ Alice has confidential software program P, Bob has confidential data D and they 
 ## One Instruction Set Architecture
 Our protocol is based on the Turing-complete single instruction set architecture called subble (acronym for subtract and branch on less than or equal). In a subble programming environment, the computer memory space is divided into two segments : code and data. For convenience, we assume that they are addressed separately and they contain different data types. The input data is contained in an integer-type array D of size n_d. The program is contained an array P of size n_p. Each subble instruction is a quadruple (a,b,c,d) s.t 0 <= a,b <= n_d and 0 <= c,d <= n_p. To execute a single subble instruction, the following sequence of steps takes place:
 ```
-test
+1. D[a] := D[a] - D[b]
+2. if (D[a] <= 0)
+3.    next instruction is P[c]
+4. else
+5.    next instruction is P[d]
 ```
