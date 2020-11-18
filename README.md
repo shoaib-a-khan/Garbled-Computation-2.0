@@ -29,7 +29,7 @@ The prototype implements four independent entities:
 Simulates the actions of program-ownwer and data-owner. Preprocessor splits into random additive shares both program `P.txt` and data `D.txt`. It outputs pair `P_A.txt`, `D_A.txt` to `./inputs/alice/` and pair `P_B.txt`, `D_B.txt` to `./inputs/bob/`. In real world, the program P is split by the program owner (or Alice) and the data D is split by data owner (or Bob). All these computations happen in the offline phase.
 
 ### Helper: 
-Generates correlated randoms for Alice and Bob to be used during the online phase of GC protocol. It takes as an input the size of program and data, and outputs randoms for Alice in `./randoms/alice/` directory and randoms for Bob in `./randoms/bob/` directory.
+Generates correlated randoms for Alice and Bob to be used during the online phase of GC protocol. It takes as an input the size of program and data, and outputs randoms for Alice in `./randoms/alice/` directory and randoms for Bob in `./randoms/bob/` directory. All these computations happen in the offline phase.
 
 ### Alice: 
 Simulates all the steps performed by Alice in the online phase of our GC protocol. Reads as input `P_A.txt` and `D_A.txt` from directory `./inputs/alice/`. Outputs her share of the result of computation to her terminal.
@@ -41,3 +41,9 @@ Simulates all the steps performed by Bob in the online phase of our protocol. Re
 - g++ compiler (v7.4.0)
 - [libsodium](https://libsodium.gitbook.io/doc/installation) library.
 - CMake v3.10.2 or higher (Optional)
+
+## Compilation
+
+## Execution
+
+## Output
