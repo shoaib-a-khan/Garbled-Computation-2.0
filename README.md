@@ -67,7 +67,7 @@ On the terminal, navigate to project directory. Enter following sequence of comm
 
 
 ## Execution
-To see our prototype in action, perform the following sequence of executions:
+To see our prototype in action, perform the following sequence of program executions:
 ```
   ./preprocessor
 ```
