@@ -1,0 +1,69 @@
+Alice: Oblivious Execute Run # 0
+Alice: pc = 0
+Alice: Msg sent to Bob : -120 -840
+Alice: Msg rcvd from Bob: 122 840
+Alice: a = 2 b = 0
+Alice: OC output  beta' = -28
+Alice: OM output beta'* P'[pc][2] : 4.59918e+06
+Alice: OM output (1-beta')(P'[pc][3]) : 172834
+Alice: Oblivious Execute Run # 1
+Alice: pc = 3
+Alice: Msg sent to Bob : 2108765 1566294
+Alice: Msg rcvd from Bob: -2108759 -1566293
+Alice: a = 6 b = 1
+Alice: OC output  beta' = -36
+Alice: OM output beta'* P'[pc][2] : -2.21772e+10
+Alice: OM output (1-beta')(P'[pc][3]) : -2.73067e+09
+Alice: Oblivious Execute Run # 2
+Alice: pc = 4
+Alice: Msg sent to Bob : 1731263 2307747
+Alice: Msg rcvd from Bob: -1731256 -2307742
+Alice: a = 7 b = 5
+Alice: OC output  beta' = -37
+Alice: OM output beta'* P'[pc][2] : -1.84157e+10
+Alice: OM output (1-beta')(P'[pc][3]) : -1.02706e+10
+Alice: Oblivious Execute Run # 3
+Alice: pc = 14
+Alice: Msg sent to Bob : 1613744 2019307
+Alice: Msg rcvd from Bob: -1613742 -2019304
+Alice: a = 2 b = 3
+Alice: OC output  beta' = -36
+Alice: OM output beta'* P'[pc][2] : -1.73768e+10
+Alice: OM output (1-beta')(P'[pc][3]) : -1.37904e+10
+Alice: Oblivious Execute Run # 4
+Alice: pc = 5
+Alice: Msg sent to Bob : 1338714 1763996
+Alice: Msg rcvd from Bob: -1338706 -1763993
+Alice: a = 8 b = 3
+Alice: OC output  beta' = -36
+Alice: OM output beta'* P'[pc][2] : -2.09045e+10
+Alice: OM output (1-beta')(P'[pc][3]) : -1.90294e+10
+Alice: Oblivious Execute Run # 5
+Alice: pc = 13
+Alice: Msg sent to Bob : 1855041 1840798
+Alice: Msg rcvd from Bob: -1855036 -1840790
+Alice: a = 5 b = 8
+Alice: OC output  beta' = -36
+Alice: OM output beta'* P'[pc][2] : -2.47431e+10
+Alice: OM output (1-beta')(P'[pc][3]) : -2.16672e+10
+Alice: Oblivious Execute Run # 6
+Alice: pc = 4
+Alice: Msg sent to Bob : 1979707 1688442
+Alice: Msg rcvd from Bob: -1979699 -1688436
+Alice: a = 8 b = 6
+Alice: OC output  beta' = -36
+Alice: OM output beta'* P'[pc][2] : -1.55903e+10
+Alice: OM output (1-beta')(P'[pc][3]) : -1.10327e+10
+Alice: Oblivious Execute Run # 7
+Alice: pc = 9
+Alice: Msg sent to Bob : 1668937 1836916
+Alice: Msg rcvd from Bob: -1668930 -1836911
+Alice: a = 7 b = 5
+Alice: OC output  beta' = -37
+Alice: OM output beta'* P'[pc][2] : -6.43993e+09
+Alice: OM output (1-beta')(P'[pc][3]) : -9.19786e+09
+Alice: Oblivious Execute Run # 8
+Alice: pc = 4
+Alice: Msg sent to Bob : 1989417 1575569
+Alice: Msg rcvd from Bob: -1989418 -1575570
+Alice: a = -1 b = -1

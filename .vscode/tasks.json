@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "g++ build active file",
+        "command": "/usr/bin/g++",
+        "args": ["-g", "-pthread", 
+            "${fileDirname}/main.cpp", 
+            "${fileDirname}/alice.cpp", 
+            "${fileDirname}/bob.cpp",
+            "${fileDirname}/server.cpp",
+            "${fileDirname}/client.cpp",
+            "${fileDirname}/helper.cpp",
+            "${fileDirname}/preprocessor.cpp",
+            "-o", "${fileDirname}/${fileBasenameNoExtension}"],
+        "options": {
+          "cwd": "/usr/bin"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
