@@ -71,7 +71,7 @@ To see our prototype in action, perform the following sequence of program execut
 ```
   ./preprocessor
 ```
-This will ask for a path to program and data to be split. We have provided some example programs in `./Experiments/` directory. To run the fault tree analysis example presented in our paper (the circuit diagram may be accessed ./Experiments/Circuit/Fault_Tree.png), enter the following program and data paths:
+This will ask for a path to program and data to be split. We have provided some example programs in `./Experiments/` directory. To run the fault tree analysis example presented in our paper (the circuit diagram may be accessed `./Experiments/Circuit/Fault_Tree.png`), enter the following program and data paths:
 ```
  Please enter Program Path: ../Experiments/Circuit/P.txt
  
