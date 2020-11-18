@@ -45,7 +45,7 @@ Simulates all the steps performed by Bob in the online phase of our protocol. Re
 ## Compilation
 - **Option 1**
 
-On the terminal, navigate to project directory. Enter following command line to compile: 
+On the terminal, navigate to project directory. Enter following sequence of command lines to compile the four executables: 
 ```
   mkdir build
   cd build
