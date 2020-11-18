@@ -159,10 +159,7 @@ void Bob::LoadNextShuffleVectors()
 void Bob::GoLive(char* ip, int portno)
 {
     cli->Init(ip, portno);
-    RunGCProtocol();
-    // long beta = 47;
-    // ObliviousMultiplication(beta, P[pc][2]);
-    // ObliviousMultiplication(-beta, P[pc][3]);
+    RunGCProtocol();    
 }
 
 void Bob::RunGCProtocol()
@@ -211,22 +208,7 @@ void Bob::ObliviousExecute()
     fout<< "Bob: OM output beta\"* P\"[pc][2] : "<<next_pc<<"\n";
     double temp = ObliviousMultiplication(-beta, P[pc][3]);
     fout<< "Bob: OM output (-beta\")(P\"[pc][3]) : "<<temp<<"\n";
-    pc = next_pc + temp;
-    // msg_for_Alice.scalar1 = pc;
-    // msg_from_Alice = cli->Receive();
-    // fout<<"Bob: Msg rcvd from Alice next_pc': "<<msg_from_Alice.scalar1 << "\n";
-    // cli->Send(msg_for_Alice);
-    // fout<<"Bob: Msg sent to Alice next_pc\": "<<msg_for_Alice.scalar1 << "\n";
-    // pc += msg_from_Alice.scalar1;
-    // fout<<"Bob: next_pc = "<<pc<<"\n";
-    // if(pc >= n_p || pc < 0){
-    //     P.clear();
-    //     D.clear();
-    //     LoadProgramShare();
-    //     LoadDataShare();
-    //     pc = 0;
-    //     termination_condition = true;
-    // }
+    pc = next_pc + temp;    
 }   
 
 long Bob::ObliviousComparison(std::string op, long arg1, long arg2)
@@ -246,14 +228,6 @@ long Bob::ObliviousAddition(long arg1, long arg2){
 
 double Bob::ObliviousMultiplication(long arg1, long arg2)
 {
-    // long result;
-    // Message msg_for_Alice, msg_from_Alice;
-    // msg_for_Alice.scalar1 = arg1;
-    // msg_for_Alice.scalar2 = arg2;
-    // msg_from_Alice = cli->Receive();
-    // cli->Send(msg_for_Alice);
-    // result = 100;
-    
     double result = arg1 * arg2; //Bob locally computes x"y"
     Message msg_for_Alice,  msg_from_Alice;
     rc = ((rc + 3) <= Randoms.size() ? rc : 0);
