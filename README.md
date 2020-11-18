@@ -85,11 +85,11 @@ This will ask for program and data size. For the circuit example, the program si
 
 Now we are all set for the online phase of our GC protocol. Open two terminals and navigate to project's build directory on both.
 
-On terminal 1:
+On terminal 1, run:
 ```
   ./alice
 ```
-On terminal 2:
+On terminal 2, run:
 ```
   ./bob
 ```
