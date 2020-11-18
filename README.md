@@ -67,5 +67,32 @@ On the terminal, navigate to project directory. Enter following sequence of comm
 
 
 ## Execution
+To see our prototype in action, perform the following sequence of executions:
+```
+  ./preprocessor
+```
+This will ask for a path to program and data to be split. We have provided some example programs in `./Experiments/` directory. To run the fault tree analysis example given in our paper enter the following program and data paths:
+```
+ Please enter Program Path: ../Experiments/Circuit/P.txt
+ 
+ Please enter Data Path: ../Experiments/Circuit/D.txt  
+```
+Next run the helper to generate randoms:
+```
+  ./helper
+```
+This will ask for program and data size. For the circuit example, the program size is 16 and the data size is 9.
+
+Now we are all set for the online phase of our GC protocol. Open two terminals and navigate to project's build directory on both. 
+On terminal 1:
+```
+  ./alice
+```
+On terminal 2:
+```
+  ./bob
+```
+And viola! The magic starts to happen =)
 
 ## Output
+You can see the exection trace and the eventual output of fault tree analysis on the two terminals. Adding the two values from Alice and Bob will give the actual ouptput of the circuit evaluation. 
