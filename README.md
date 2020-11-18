@@ -43,6 +43,28 @@ Simulates all the steps performed by Bob in the online phase of our protocol. Re
 - CMake v3.10.2 or higher (Optional)
 
 ## Compilation
+- **Option 1**
+
+On the terminal, navigate to project directory. Enter following command line to compile: 
+```
+  mkdir build
+  cd build
+  g++ ../src/preprocessor.cpp ../src/preprocessor_main.cpp -o preprocessor
+  g++ ../src/helper.cpp ../src/helper_main.cpp -o helper
+  g++ ../src/alice.cpp ../src/alice_main.cpp ../src/server.cpp -o alice -pthread
+  g++ ../src/bob.cpp ../src/bob_main.cpp ../src/client.cpp -o bob -pthread
+  
+```
+- **Option 2** (Requires CMake v3.10.2 or higher)
+
+On the terminal, navigate to project directory. Enter following sequence of command lines to compile:
+```
+  mkdir build
+  cd build
+  cmake ..
+  make
+```
+
 
 ## Execution
 
