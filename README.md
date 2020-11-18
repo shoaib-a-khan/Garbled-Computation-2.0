@@ -1,5 +1,7 @@
 # Garbled-Computation-2.0
 
+The present artifact is a proof-of-concept implementation of our Garbled Computation protocol in Figure 5 (Section 4) of the related paper. Below you will find a quick introduction to the goals that our protocol aims to achieve.
+
 ## Introduction
 A Garbled Computer is auniversal and secure computational model where an adversary observing the execution of a program learns nothing about the code being executed, nor the data it is operating on (whether inputs or intermediate values), nor the outputs it is producing. The model aims to achieve, using a single general approach, the multiple goals of software obfuscation, confidentiality of input data, and confidentiality of intermediate and output data values. It enables execution on untrusted platforms, of trustedand confidential code whose inputs and outputs are sensitive. For example, using GC we can utilize Amazon cloud services without revealing to Amazon the nature of the computation or the data,and without requiring Amazon to change the operation of its cloud services.
 
@@ -18,4 +20,24 @@ Our protocol is based on the Turing-complete one instruction set architecture ca
 ```
 
 ## Protocol Details
-The details of our Garbled Computation protocol may be found in the related paper. For a quick overview, the reader may find `Project Presentation.pdf` a helpful guide.
+The details of our Garbled Computation protocol may be found in the related research paper. For a quick overview, the reader may find `Project Presentation.pdf` a helpful guide.
+
+## Overview of Prototype
+The prototype implements four independent entities:
+
+### Preprpcessor:
+Simulates the actions of program-ownwer and data-owner. Preprocessor splits into random additive shares both P.txt and D.txt. It outputs pair P_A.txt, D_A.txt to `./inputs/alice/` and pair P_B.txt, D_B.txt to `./inputs/bob/`. In real world, the program P is split by the program owner (or Alice) and the data D is split by data owner (or Bob). All these computations happen in the offline phase.
+
+### Helper: 
+Generates correlated randoms for Alice and Bob to be used during the online phase. Takes as an input the size of program and data and outputs randoms for Alice to `./randoms/alice/` directory and randoms for Bob to `./randoms/bob/` directory.
+
+### Alice: 
+Simulates all the steps performed by Alice in the online phase of our protocol. Takes as input P_A.txt and D_A.txt in directory `./inputs/alice/`. Outputs her share of the result of computation to her terminal.
+
+### Bob: 
+Simulates all the steps performed by Bob in the online phase of our protocol. Takes as input P_B.txt and D_B.txt in directory `./inputs/bob/`. Outputs his share of the result of computation to his terminal.
+
+## Pre-requisites to Compile
+- g++ compiler (v7.4.0)
+- [libsodium](https://libsodium.gitbook.io/doc/installation) library.
+- CMake v3.10.2 or higher (Optional)
