@@ -96,4 +96,4 @@ On terminal 2:
 And viola! The magic starts to happen =)
 
 ## Output
-You can see the exection trace and the eventual output of fault tree analysis on the two terminals. Adding the two values from Alice and Bob will give the actual ouptput of the circuit evaluation. 
+You can see the exection trace and the eventual output of fault tree analysis on the two terminals. Alice's view on terminal 1 and Bob's view on terminal 2. Adding the final two values output by Alice and Bob will give the actual ouptput of the circuit evaluation. 
