@@ -158,11 +158,7 @@ void Alice::LoadNextShuffleVectors()
 int Alice::GoLive(int portno)
 {
     srv->Init(portno);
-    RunGCProtocol();
-    // ObliviousMultiplication(-15,-965);
-    // long beta = -46;
-    // ObliviousMultiplication(beta, P[pc][2]);
-    // ObliviousMultiplication(1-beta, P[pc][3]);
+    RunGCProtocol();    
 }
 
 void Alice::RunGCProtocol()
