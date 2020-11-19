@@ -26,7 +26,7 @@ The details of our Garbled Computation protocol may be found in our related rese
 The prototype implements four independent entities:
 
 ### Preprocessor:
-Simulates the actions of program-ownwer and data-owner. Preprocessor splits into random additive shares both program `P.txt` and data `D.txt`. It outputs pair `P_A.txt`, `D_A.txt` to `./inputs/alice/` and pair `P_B.txt`, `D_B.txt` to `./inputs/bob/`. In real world, the program P is split by the program owner (or Alice) and the data D is split by data owner (or Bob). All these computations happen in the offline phase.
+Simulates the actions of program-owner and data-owner. Preprocessor splits into random additive shares both program `P.txt` and data `D.txt`. It outputs pair `P_A.txt`, `D_A.txt` to `./inputs/alice/` and pair `P_B.txt`, `D_B.txt` to `./inputs/bob/`. In real world, the program P is split by the program owner (or Alice) and the data D is split by data owner (or Bob). All these computations happen in the offline phase.
 
 ### Helper: 
 Generates correlated randoms for Alice and Bob to be used during the online phase of GC protocol. It takes as an input the size of program and data, and outputs randoms for Alice in `./randoms/alice/` directory and randoms for Bob in `./randoms/bob/` directory. All these computations happen in the offline phase.
