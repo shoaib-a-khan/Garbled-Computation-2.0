@@ -81,7 +81,7 @@ Next run the helper to generate randoms:
 ```
   ./helper
 ```
-This will ask for program and data size. For the circuit example, the program size is 16 and the data size is 9.
+This will ask for program and data size. For the privacy-preserving fault tree analysis example, the program size is 16 and the data size is 9.
 
 Now we are all set for the online phase of our GC protocol. Open two terminals and navigate to the project's build directory on both.
 
