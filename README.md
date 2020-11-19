@@ -20,7 +20,7 @@ Our protocol is based on the Turing-complete one instruction set architecture ca
 ```
 
 ## Protocol Details
-The details of our Garbled Computation protocol may be found in the related research paper. For a quick overview, the reader may find `Project Presentation.pdf` a helpful guide.
+The details of our Garbled Computation protocol may be found in our related research paper. For a quick overview, the reader may find `Project Presentation.pdf` a helpful guide.
 
 ## Overview of Software Prototype
 The prototype implements four independent entities:
