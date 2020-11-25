@@ -101,4 +101,4 @@ You can see the exection trace and the eventual output of privacy preserving fau
 ## Acknowledgement and Disclaimer
 Part of this work was made possible by the NPRP award NPRP X-063-1-014 from the Qatar National Research Fund (a member of The Qatar Foundation). The statements made herein are solely the responsibility of the authors.
 
-This implementation is just for the proof of concept. There may be areas in the code that were implemented insecurely for the sake of code readibility and understanding. We are not responsible for any damages if the code is used for commercial purposes.
+This implementation is for proof of concept. There may be areas in the code that were implemented insecurely for the sake of code readibility and understanding. We are not responsible for any damages if the code is used for commercial purposes.
