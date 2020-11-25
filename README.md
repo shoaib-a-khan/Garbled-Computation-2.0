@@ -81,7 +81,7 @@ Next run the helper to generate randoms:
 ```
   ./helper
 ```
-This will ask for program and data size. For the circuit example, the program size is 16 and the data size is 9.
+This will ask for program and data size. For the privacy-preserving fault tree analysis example, the program size is 16 and the data size is 9.
 
 Now we are all set for the online phase of our GC protocol. Open two terminals and navigate to the project's build directory on both.
 
@@ -96,4 +96,9 @@ On terminal 2, run:
 And viola! The magic starts to happen =)
 
 ## Output
-You can see the exection trace and the eventual output of fault tree analysis on the two terminals. Alice's view on terminal 1 and Bob's view on terminal 2. Adding the final two values output by Alice and Bob will give the actual ouptput of the circuit evaluation. 
+You can see the exection trace and the eventual output of privacy preserving fault tree analysis on the two terminals. Alice's view on terminal 1 and Bob's view on terminal 2. Adding the final two values output by Alice and Bob will give the actual ouptput of the circuit evaluation. 
+
+## Acknowledgement and Disclaimer
+Part of this work was made possible by the NPRP award NPRP X-063-1-014 from the Qatar National Research Fund (a member of The Qatar Foundation). The statements made herein are solely the responsibility of the authors.
+
+This implementation is just for the proof of concept. There may be areas in the code that were implemented insecurely for the sake of code readibility and understanding. We are not responsible for any damages if the code is used for commercial purposes.
