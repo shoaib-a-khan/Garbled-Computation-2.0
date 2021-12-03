@@ -45,7 +45,7 @@ void Helper::GenerateCorrelatedRandoms(int n)
         R2[i] = rand()%10000;
         R[i] = rand()%10000;
     }
-    fout.open("../randoms/Randoms_A.txt");
+    fout.open("../randoms/alice/Randoms_A.txt");
     for (int i = 0; i < n; i++)
     {
         fout << R1[i] << " ";
@@ -53,7 +53,7 @@ void Helper::GenerateCorrelatedRandoms(int n)
     }
     fout.flush();
     fout.close();
-    fout.open("../randoms/Randoms_B.txt");
+    fout.open("../randoms/bob/Randoms_B.txt");
     for (int i = 0; i < n; i++)
     {
         fout << R2[i] << " ";
@@ -68,8 +68,8 @@ void Helper::GenerateAlphaRandoms(int n)
     std::ofstream fa, fb;
     std::vector<long> R(n);
     time_t t;
-    fa.open("../randoms/AlphaRandoms_A.txt");
-    fb.open("../randoms/AlphaRandoms_B.txt");
+    fa.open("../randoms/alice/AlphaRandoms_A.txt");
+    fb.open("../randoms/bob/AlphaRandoms_B.txt");
     srand((unsigned)time(&t));
     for (int i = 0; i < n; i++)
         R[i] = rand() % 10000;
@@ -88,13 +88,13 @@ void Helper::GenerateRandomPermutations(int n_p, int n_d, int count)
 {
     std::vector<int> pi_p(n_p, 0), flags_p(n_p, 0);
     std::vector<int> pi_d(n_d, 0), flags_d(n_d, 0);
-    std::ofstream output_file_pa("../randoms/Permutations_PA.txt");
+    std::ofstream output_file_pa("../randoms/alice/Permutations_PA.txt");
     std::ostream_iterator<int> output_iterator_pa(output_file_pa, " ");
-    std::ofstream output_file_da("../randoms/Permutations_DA.txt");
+    std::ofstream output_file_da("../randoms/alice/Permutations_DA.txt");
     std::ostream_iterator<int> output_iterator_da(output_file_da, " ");
-    std::ofstream output_file_pb("../randoms/Permutations_PB.txt");
+    std::ofstream output_file_pb("../randoms/bob/Permutations_PB.txt");
     std::ostream_iterator<int> output_iterator_pb(output_file_pb, " ");
-    std::ofstream output_file_db("../randoms/Permutations_DB.txt");
+    std::ofstream output_file_db("../randoms/bob/Permutations_DB.txt");
     std::ostream_iterator<int> output_iterator_db(output_file_db, " ");
     time_t t;
     srand((unsigned)time(&t));
@@ -155,8 +155,8 @@ void Helper::GenerateRandomPermutations(int n_p, int n_d, int count)
 void Helper::GenerateShuffleVectors(int n_p, int n_d, int count)
 {
     std::ofstream output_file;
-    std::vector<std::string> file_name = {"../randoms/U_PA.txt", "../randoms/U_PB.txt", "../randoms/R_PA.txt", "../randoms/R_PB.txt",
-                                          "../randoms/U_DA.txt", "../randoms/U_DB.txt", "../randoms/R_DA.txt", "../randoms/R_DB.txt"};
+    std::vector<std::string> file_name = {"../randoms/alice/U_PA.txt", "../randoms/bob/U_PB.txt", "../randoms/alice/R_PA.txt", "../randoms/bob/R_PB.txt",
+                                          "../randoms/alice/U_DA.txt", "../randoms/bob/U_DB.txt", "../randoms/alice/R_DA.txt", "../randoms/bob/R_DB.txt"};
     time_t t;
     srand((unsigned)time(&t));
 
@@ -185,9 +185,9 @@ void Helper::GeneratePermutedVectors(int n_p, int n_d, int count)
 {
     std::ofstream output_file;
     std::ifstream fin1, fin2;
-    std::vector<std::string> file_name = {"../randoms/Pi_diff_R_PA_PB.txt", "../randoms/Pi_diff_R_PB_PA.txt",
-                                          "../randoms/Pi_diff_R_DA_DB.txt", "../randoms/Pi_diff_R_DB_DA.txt",
-                                          "../randoms/R_PA.txt", "../randoms/R_PB.txt", "../randoms/R_DA.txt", "../randoms/R_DB.txt"};
+    std::vector<std::string> file_name = {"../randoms/bob/Pi_diff_R_PA_PB.txt", "../randoms/alice/Pi_diff_R_PB_PA.txt",
+                                          "../randoms/bob/Pi_diff_R_DA_DB.txt", "../randoms/alice/Pi_diff_R_DB_DA.txt",
+                                          "../randoms/alice/R_PA.txt", "../randoms/bob/R_PB.txt", "../randoms/alice/R_DA.txt", "../randoms/bob/R_DB.txt"};
     for (int i = 0; i < 4; i++)
     {
         output_file.open(file_name[i]);
@@ -255,10 +255,10 @@ void Helper::GeneratePermutedVectors(int n_p, int n_d, int count)
 
 std::vector<int> Helper::LoadNextRandomPermutation(int file_no, int size)
 {
-    static std::ifstream pin_a("../randoms/Permutations_PA.txt");
-    static std::ifstream pin_b("../randoms/Permutations_PB.txt");
-    static std::ifstream din_a("../randoms/Permutations_DA.txt");
-    static std::ifstream din_b("../randoms/Permutations_DB.txt");
+    static std::ifstream pin_a("../randoms/alice/Permutations_PA.txt");
+    static std::ifstream pin_b("../randoms/bob/Permutations_PB.txt");
+    static std::ifstream din_a("../randoms/alice/Permutations_DA.txt");
+    static std::ifstream din_b("../randoms/bob/Permutations_DB.txt");
     std::vector<int> Pi;
     long temp;
     for (int i = 0; i < size; i++)
